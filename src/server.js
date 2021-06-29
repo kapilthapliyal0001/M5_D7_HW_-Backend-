@@ -9,7 +9,11 @@ const server = express();
 const port = process.env.port || 3001;
 
 // section for routes and global middlewares
-const whitelist = [process.env.FRONTEND_URL, process.env.FRONTEND_PROD_URL];
+const whitelist = [
+  process.env.FRONTEND_URL,
+  process.env.FRONTEND_PROD_URL,
+  "http://localhost:3001",
+];
 server.use(
   cors({
     origin: (origin, callback) => {
