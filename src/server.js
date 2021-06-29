@@ -2,8 +2,8 @@ import express from "express";
 import cors from "cors";
 import listEndpoints from "express-list-endpoints";
 import blogRouter from "./blogs/index.js";
-import {join, dirname} from "path";
-import {fileURLToPath} from "url";
+// import {join, dirname} from "path";
+// import {fileURLToPath} from "url";
 
 const server = express();
 const port = process.env.port || 3001;
