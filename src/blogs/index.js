@@ -17,9 +17,10 @@ blogRouter.get("/", async (req, res, next) => {
     const fileAsBuffer = fs.readFileSync(blogFilePath);
     const fileAsString = fileAsBuffer.toString();
     const fileAsJSON = JSON.parse(fileAsString);
+    console.log(fileAsJSON);
     res.send(fileAsJSON);
   } catch (error) {
-    res.send(500).send({message: error.message}).send("Problem Here");
+    res.send(500).send({message: error.message});
   }
 });
 
