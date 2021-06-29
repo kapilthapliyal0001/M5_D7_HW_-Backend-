@@ -19,7 +19,7 @@ blogRouter.get("/", async (req, res, next) => {
     const fileAsJSON = JSON.parse(fileAsString);
     res.send(fileAsJSON);
   } catch (error) {
-    res.send(500).send({message: error.message});
+    res.send(500).send({message: error.message}).send("Problem Here");
   }
 });
 
