@@ -50,8 +50,8 @@ server.use(express.json());
 // Server Routes
 
 server.use("/blogs", blogRouter);
-server.use("/files", filesRouter);
-server.use("/posts", postRouter);
+// server.use("/files", filesRouter);
+// server.use("/posts", postRouter);
 
 //Section for the error middlewares
 server.use(notFoundMiddleware);
