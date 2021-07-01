@@ -9,6 +9,7 @@ import {fileURLToPath} from "url";
 
 import {validationResult} from "express-validator";
 import {postValidation} from "./validation.js";
+import {type} from "os";
 
 // const __fileName = fileURLToPath(import.meta.url);
 const __fileName = fileURLToPath(import.meta.url);
@@ -51,7 +52,7 @@ postRouter.get("/", (req, res, next) => {
 postRouter.get("/:id", async (req, res, next) => {
   try {
     const file = getPost();
-    const new_file = file.find((p) => p._id === req.params.id);
+    const new_file = file.find((p) => p._id.toString() === req.params.id);
     if (new_file) {
       res.send(new_file);
     } else {
@@ -77,7 +78,7 @@ postRouter.post("/", postValidation, async (req, res, next) => {
         ...req.body,
         _id: uniqid(),
         created_at: new Date(),
-        cover: `https://picsum.photos/200/300.jpg`,
+        // cover: `https://picsum.photos/200/300.jpg`,
         author: {
           name: req.body.name,
           avatar: `https://picsum.photos/200/200.jpg`,

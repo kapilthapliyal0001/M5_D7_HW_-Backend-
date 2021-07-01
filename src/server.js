@@ -21,7 +21,7 @@ const publicFolderPath = join(
 // Initiate and Server details;
 const server = express();
 const port = process.env.PORT || 3001;
-
+console.log(process.env);
 // section for routes and global middlewares;
 
 //Cross Platform Origin verification;
