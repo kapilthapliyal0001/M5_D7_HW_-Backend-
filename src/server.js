@@ -8,7 +8,7 @@ import {
   catchErrorMiddleware,
   badRequestMiddleware,
   notFoundMiddleware,
-} from "./errorMiddlewares.js";
+} from "./errorMiddleWares.js";
 import filesRouter from "./services/files/index.js";
 import postRouter from "./blogPosts/index.js";
 
@@ -42,6 +42,7 @@ server.use(
     },
   })
 );
+console.log(process.env.PORT, ":  Check this port ");
 
 server.use(express());
 server.use(cors());
