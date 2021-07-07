@@ -65,17 +65,6 @@
     }
   },
   {
-    "name": "kapil",
-    "title": "somehting",
-    "category": null,
-    "content": "<div jnejncecne oicneicnec. oeinceicne ioenciec oicieoce ciec ceci ni ni n i o oi ninino noin.  </div>",
-    "_id": "24sxhpil8kqcn3h5e",
-    "created_at": "2021-06-25T18:00:10.129Z",
-    "cover": "https://picsum.photos/200/300.jpg",
-    "author": {"name": "kapil", "avatar": "https://picsum.photos/200/200.jpg"},
-    "readTime": {"value": 0, "unit": "Minutes"}
-  },
-  {
     "name": "kapil_Check",
     "title": "somehting",
     "category": null,
